@@ -1,0 +1,435 @@
+This is Pre-processor directive: #include <stdio.h>
+
+This is Pre-processor directive: #include <stdlib.h>
+
+This is Pre-processor directive: #include <string.h>
+
+This is Keyword: int
+
+This is Function: main(
+
+This is Delimiter: )
+
+This is Delimiter: {
+
+This is Keyword:char
+This is Identifier: str
+
+This is Delimiter: [
+
+This is Integer: 100
+
+This is Delimiter: ]
+
+This is Delimiter: ,
+
+This is Identifier: word
+
+This is Delimiter: [
+
+This is Integer: 30
+
+This is Delimiter: ]
+
+This is Delimiter: ;
+
+This is Keyword: int
+
+This is Identifier: i
+
+This is Delimiter: ,
+
+This is Identifier: j
+
+This is Delimiter: ,
+
+This is Identifier: found
+
+This is Delimiter: ,
+
+This is Identifier: slen
+
+This is Delimiter: ,
+
+This is Identifier: wlen
+
+This is Delimiter: ,
+
+This is Identifier: index
+
+This is Delimiter: ;
+
+This is Function: printf(
+
+this is String:"Enter the String: "
+
+This is Delimiter: )
+
+This is Delimiter: ;
+
+This is Function: gets(
+
+This is Identifier: str
+
+This is Delimiter: )
+
+This is Delimiter: ;
+
+This is Function: printf(
+
+this is String:"Enter the Word: "
+
+This is Delimiter: )
+
+This is Delimiter: ;
+
+This is Function: gets(
+
+This is Identifier: word
+
+This is Delimiter: )
+
+This is Delimiter: ;
+
+This is Identifier: slen
+
+This is Assignment Operator: =
+
+This is Function: strlen(
+
+This is Identifier: str
+
+This is Delimiter: )
+
+This is Delimiter: ;
+
+This is Identifier: wlen
+
+This is Assignment Operator: =
+
+This is Function: strlen(
+
+This is Identifier: word
+
+This is Delimiter: )
+
+This is Delimiter: ;
+
+This is Identifier: index
+
+This is Assignment Operator: =
+
+This is Negative Integer: -1
+
+This is Delimiter: ;
+
+This is Function: for(
+
+This is Identifier: i
+
+This is Assignment Operator: =
+
+This is Integer: 0
+
+This is Delimiter: ;
+
+This is Identifier: i
+
+This is Relational Operator: <
+
+This is Identifier: slen
+
+This is Delimiter: ;
+
+This is Identifier: i
+
+This is Relational Operator: ++
+
+This is Delimiter: )
+
+This is Delimiter: {
+
+This is Identifier: found
+
+This is Assignment Operator: =
+
+This is Integer: 1
+
+This is Delimiter: ;
+
+This is Function: for(
+
+This is Identifier: j
+
+This is Assignment Operator: =
+
+This is Integer: 0
+
+This is Delimiter: ;
+
+This is Identifier: j
+
+This is Relational Operator: <
+
+This is Identifier: wlen
+
+This is Delimiter: ;
+
+This is Identifier: j
+
+This is Relational Operator: ++
+
+This is Delimiter: )
+
+This is Delimiter: {
+
+This is Function: if(
+
+This is Identifier: str
+
+This is Delimiter: [
+
+This is Identifier: i
+
+This is Arithmatic Operator: +
+
+This is Identifier: j
+
+This is Delimiter: ]
+
+This is Relational Operator: !=
+
+This is Identifier: word
+
+This is Delimiter: [
+
+This is Identifier: j
+
+This is Delimiter: ]
+
+This is Delimiter: )
+
+This is Delimiter: {
+
+This is Identifier: found
+
+This is Assignment Operator: =
+
+This is Integer: 0
+
+This is Delimiter: ;
+
+This is Keyword: break
+
+This is Delimiter: ;
+
+This is Delimiter: }
+
+This is Delimiter: }
+
+This is Function: if(
+
+This is Identifier: str
+
+This is Delimiter: [
+
+This is Identifier: i
+
+This is Arithmatic Operator: +
+
+This is Identifier: j
+
+This is Delimiter: ]
+
+This is Relational Operator: !=
+
+This is Delimiter: '
+
+This is Delimiter: '
+
+This is Special Characters: &
+
+This is Special Characters: &
+
+This is Identifier: str
+
+This is Delimiter: [
+
+This is Identifier: i
+
+This is Arithmatic Operator: +
+
+This is Identifier: j
+
+This is Delimiter: ]
+
+This is Relational Operator: !=
+
+This is Delimiter: '
+
+This is Identifier: t
+
+This is Delimiter: '
+
+This is Special Characters: &
+
+This is Special Characters: &
+
+This is Identifier: str
+
+This is Delimiter: [
+
+This is Identifier: i
+
+This is Arithmatic Operator: +
+
+This is Identifier: j
+
+This is Delimiter: ]
+
+This is Relational Operator: !=
+
+This is Delimiter: '
+
+This is Identifier: n
+
+This is Delimiter: '
+
+This is Special Characters: &
+
+This is Special Characters: &
+
+This is Identifier: str
+
+This is Delimiter: [
+
+This is Identifier: i
+
+This is Arithmatic Operator: +
+
+This is Identifier: j
+
+This is Delimiter: ]
+
+This is Relational Operator: !=
+
+This is Delimiter: '
+
+This is Integer: 0
+
+This is Delimiter: '
+
+This is Delimiter: )
+
+This is Delimiter: {
+
+This is Identifier: found
+
+This is Assignment Operator: =
+
+This is Integer: 0
+
+This is Delimiter: ;
+
+This is Delimiter: }
+
+This is Function: if(
+
+This is Identifier: found
+
+This is Relational Operator: ==
+
+This is Integer: 1
+
+This is Delimiter: )
+
+This is Delimiter: {
+
+This is Function: for(
+
+This is Identifier: j
+
+This is Assignment Operator: =
+
+This is Identifier: i
+
+This is Delimiter: ;
+
+This is Identifier: j
+
+This is Relational Operator: <=
+
+This is Identifier: slen
+
+This is Arithmatic Operator: -
+
+This is Identifier: wlen
+
+This is Delimiter: ;
+
+This is Identifier: j
+
+This is Relational Operator: ++
+
+This is Delimiter: )
+
+This is Delimiter: {
+
+This is Identifier: str
+
+This is Delimiter: [
+
+This is Identifier: j
+
+This is Delimiter: ]
+
+This is Assignment Operator: =
+
+This is Identifier: str
+
+This is Delimiter: [
+
+This is Identifier: j
+
+This is Arithmatic Operator: +
+
+This is Identifier: wlen
+
+This is Delimiter: ]
+
+This is Delimiter: ;
+
+This is Delimiter: }
+
+This is Delimiter: }
+
+This is Delimiter: }
+
+This is Function: printf(
+
+this is String:"String after removing '%s': \n%s"
+
+This is Delimiter: ,
+
+This is Identifier: word
+
+This is Delimiter: ,
+
+This is Identifier: str
+
+This is Delimiter: )
+
+This is Delimiter: ;
+
+This is Delimiter: }
+
+this is single line Commments: //krishno
+
+this is multi line Comments: /*abc*/
+
+
+
+
+
+
+ Total Tokens = 215
