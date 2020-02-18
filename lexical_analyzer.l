@@ -1,39 +1,85 @@
 %{
 
+int total =0 ;
+
 %}
+
 %option noyywrap
 
+
+
+
 %%
-[''|,|;(|)|{|}|.|_] {fprintf(yyout,"this is Delimiter:%s\n",yytext);}
 
-[[]] {fprintf(yyout,"this is Delimiter:%s\n",yytext);}
 
-[+|-|*|/|<|>]  {fprintf(yyout,"this is Operator:%s\n",yytext);}
 
-[a-zA-Z_][a-zA-Z0-9_]* {fprintf(yyout,"this is Identifier:%s\n",yytext);}
 
-[0-9]*"."[0-9]+ {fprintf("this is float : %s\n", yytext);} 
+#.* {total++; fprintf(yyout,"This is Pre-processor directive: %s\n\n",yytext);}
 
-[0-9]+ {fprintf(yyout,"this is Integer:%s\n",yytext);}
+[''|,|;(|)|{|}|.|_] {total++; fprintf(yyout,"This is Delimiter: %s\n\n",yytext);}
+
+[[]] {total++; fprintf(yyout,"This is Delimiter: %s\n\n",yytext);}
+
+"#"|"@"|"$"|"^"|"%"|"^"|"&" {total++; fprintf(yyout,"This is Special Characters: %s\n\n",yytext);}
+
+"["|"]" {total++; fprintf(yyout,"This is Delimiter: %s\n\n",yytext);}
+
+
+"="  {total++; fprintf(yyout,"This is Assignment Operator: %s\n\n",yytext);}
+
+
+"+"|"-"|"*"|"/"  {total++; fprintf(yyout,"This is Arithmatic Operator: %s\n\n",yytext);}
+
+"<="|">="|"++"|"!="|"=="|"<"|">"  {total++; fprintf(yyout,"This is Relational Operator: %s\n\n",yytext);}
+
+("int")|("if")|("else")|("while")|("do")|("break")|("continue")|("double")|("float")|("return")|("EOF") {total++; fprintf(yyout,"This is Keyword: %s\n\n",yytext);}
+
+("return")|("char")|("case")|("sizeof")|("long")|("short")|("typedef")|("switch")|("unsigned")|("void")|("static")|("struct")|("goto") {total++;fprintf(yyout,"This is Keyword:%s\n",yytext);}
+
+[a-zA-Z_][a-zA-Z0-9_]*\( {total++; fprintf(yyout,"This is Function: %s\n\n",yytext);}
+
+[a-zA-Z_][a-zA-Z0-9_]* {total++; fprintf(yyout,"This is Identifier: %s\n\n",yytext);}
+
+[0-9]*"."[0-9]+ {total++;fprintf(yyout,"This is Fraction : %s\n\n", yytext);} 
+
+[-][0-9]*"."[0-9]+ {total++;fprintf(yyout,"This is Negative Fraction : %s\n\n", yytext);} 
+
+[0-9]+ {total++; fprintf(yyout,"This is Integer: %s\n\n",yytext);}
+
+"-"[0-9]+ {total++; fprintf(yyout,"This is Negative Integer: %s\n\n",yytext);}
+
+["]([^"\\\n]|\\.|\\\n)*["] {total++; fprintf(yyout,"this is String:%s\n\n",yytext);}
+
+"//".*" "*    {total++;fprintf(yyout,"this is single line Commments: %s\n\n",yytext);}
+
+\/\*(.*\n)*.*\*\/    {total++;fprintf(yyout,"this is multi line Comments: %s\n\n",yytext);}
+
+
+. {fprintf(yyout,"",yytext);}
+
+
+
 
 [\t\n]+
 
-"auto"|"double""|"int"|"struct"|"break"|"else"|"long"|"switch"|"case"|"enum"|"register"|"typedef"|"char"|"extern"|"return"|"union"|"const"|"short"|"float"|"unsigned"|"continue"|"for"|"signed"|"void"|"default"|"goto"|"sizeof"|"volatile"|"do"|"if"|"static"|"while" {fprintf(yyout,"this is Keyword:%s\n",yytext);}
 
-[\t\n]"#include <stdio.h>"|"#include <stdlib.h>"|"#include <string.h>"|"#include <math.h>" {fprintf(yyout,"this is Pre-processor directive:%s\n",yytext);}
-. {fprintf(yyout,"",yytext);}
 
 %%
 
+main()
+{
+extern FILE *yyin, *yyout; 
+  
+    
+    yyin = fopen("input.txt", "r"); 
+  
+   
+    yyout = fopen("Output.txt", "w"); 
+  
+    yylex();
 
-main(){
+	fprintf(yyout,"\n\n\n\n\n Total Tokens = %d",total);
+	 
 
-extern FILE *yyin,*yyout;
-yyin=fopen("input.txt","r");
-yyout=fopen("output.txt","w");
-yylex();
-
+    return 0; 
 }
-
-
-
