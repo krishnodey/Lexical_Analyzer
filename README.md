@@ -1,2 +1,2 @@
 # Lexical_Analyzer
-Lexical Analyzer iss made with Lex program
+Lexical Analyzer ismade with Lex program
