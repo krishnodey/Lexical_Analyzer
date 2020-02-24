@@ -30,7 +30,7 @@ int total =0 ;
 
 "+"|"-"|"*"|"/"  {total++; fprintf(yyout,"This is Arithmatic Operator: %s\n\n",yytext);}
 
-"and"|"or"|"xor"  {total++; fprintf(yyout,"This is Logical Operator: %s\n\n",yytext);}
+"and"|"or"|"not"|"nand"|"xor"|"nor"|"xnor"  {total++; fprintf(yyout,"This is Logical Operators: %s\n\n",yytext);}
 
 "<="|">="|"++"|"!="|"=="|"<"|">"  {total++; fprintf(yyout,"This is Relational Operator: %s\n\n",yytext);}
 
