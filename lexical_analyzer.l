@@ -30,6 +30,8 @@ int total =0 ;
 
 "+"|"-"|"*"|"/"  {total++; fprintf(yyout,"This is Arithmatic Operator: %s\n\n",yytext);}
 
+"and"|"or"|"xor"  {total++; fprintf(yyout,"This is Logical Operator: %s\n\n",yytext);}
+
 "<="|">="|"++"|"!="|"=="|"<"|">"  {total++; fprintf(yyout,"This is Relational Operator: %s\n\n",yytext);}
 
 ("int")|("if")|("else")|("while")|("do")|("break")|("continue")|("double")|("float")|("return")|("EOF") {total++; fprintf(yyout,"This is Keyword: %s\n\n",yytext);}
